@@ -5,6 +5,10 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
 
+  devServer: {
+    static: './dist',
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
@@ -34,6 +38,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
       },
     ],
   },

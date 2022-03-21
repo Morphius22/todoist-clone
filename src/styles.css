@@ -49,23 +49,178 @@ table {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
 }
 
 .header {
     grid-area: 1/1/2/-1;
     display: grid;
     grid-template-columns: auto auto;
+    background-color: #db4c3f;
 }
 
 .sidebar {
-    grid-area: 1/1/-1/2;
+    grid-area: 2/1/-1/2;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: min-content min-content;
+    background-color: #fafafa;
+    /* padding-left: 45px;
+    padding-top: 30px; */
+    gap: 60px;
+    justify-content: left;
 }
 .content {
     grid-area: 2/2/-1/-1;
     display: grid;
     grid-template-columns: auto;
+    grid-template-rows: repeat(3, min-content);
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 80px;
+    position: relative;
 }
+
+.homeSection,
+.profileSection {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
+    grid-auto-flow: column;
+}
+
+.homeSection {
+    justify-items: center;
+    margin-left: 30px;
+}
+
+.profileSection {
+    justify-items: end;
+    justify-content: end;
+    margin-right: 30px;
+}
+
+.headerIcon {
+    padding: 15px 15px;
+}
+
+.filterSection,
+.projectSection {
+    display: grid;
+    grid-template-rows: min-content min-content;  
+    gap: 25px;
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+.menuItem {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+section {
+    height: min-content;
+}
+
+.contentSection1 {
+    display: grid;
+    text-align: center;
+    row-gap: 20px;
+}
+
+.contentSection3 {
+    display: grid;
+    row-gap: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.addTaskButton {
+    background-color: #db4c3f;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    justify-self: center;
+}
+
+.form-field,
+fieldset {
+    display: flex;
+    font-size: 1rem;
+}
+
+fieldset {
+    position: relative;
+    width: 100%;
+}
+
+.form-field {
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 5px;
+}
+
+label {
+    padding: 5px 0px;
+    font-size: .75rem;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+form {
+    background-color: white;
+    box-shadow: 0px 2px 5px #d0d0d0;
+    border-radius: 5px;
+    padding: 8% 15%;
+    margin-top: 5%;
+    width: 500px;
+    position: relative;
+}
+
+button {
+    margin-left: 5px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 0.75rem;
+    background-color: #db4c3f;
+    color: white;
+    box-shadow: 0px 1px 3px #c5c7e9;
+}
+
+legend {
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #373737;
+}
+
+::placeholder {
+    color: #d3847d;
+    padding-left: 5px;
+  }
+
+  .todoForm {
+      display: none;
+  }
