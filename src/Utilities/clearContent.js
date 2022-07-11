@@ -7,4 +7,7 @@ export function clearContent () {
 
     let contentSection3 = document.querySelectorAll('.contentSection3');
     contentSection3.forEach(item => item.remove());
+
+    let todoList = document.querySelector('.toDoSection');
+    todoList.textContent = '';
 }

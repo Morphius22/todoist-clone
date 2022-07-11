@@ -80,7 +80,7 @@ table {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    gap: 80px;
+    gap: 30px;
     position: relative;
 }
 
@@ -116,7 +116,7 @@ table {
     margin-left: 45px;
 }
 
-.menuItem {
+.menuItem, .projectSideMenu {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: min-content min-content;
@@ -178,10 +178,11 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
     border-radius: 5px;
     border: 1px solid lightgray;
-    padding: 5px 0px;
+    padding: 5px 5px;
     width: 100%;
 }
 
@@ -223,4 +224,27 @@ legend {
 
   .todoForm {
       display: none;
+  }
+
+  .toDoItem {
+      display: grid;
+      background-color: white;
+      box-shadow: 0px 2px 5px #d0d0d0;
+      border-radius: 5px;
+      padding: 8% 15%;
+      margin-top: 5%;
+      width: 500px;
+      position: relative;
+      gap: 15px;
+  }
+
+  .accessories {
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+
+  h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
   }

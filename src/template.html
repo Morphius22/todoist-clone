@@ -34,14 +34,11 @@
             </div>
 
             <div class = "projectSection">
-                <div class = "menuItem">
+                <div class = "projectSideMenu">
                     <p>Projects</p>
                 </div>
 
-                <div class = "menuItem">
-                    <img src="./assets/fiber_manual_record_black_18dp.svg" alt="dot">
-                    <p>Welcome</p>
-                </div>
+                <button type="submit" class = "createProjectButton">Create Project</button>
             </div>
         </nav>
 
@@ -53,29 +50,31 @@
                     </legend>
 
                     <div class = 'form-field'>
-                        <input type="text" name="" id="" minlength="2" maxlength="25" placeholder = "Task Name" required>
+                        <input type="text" name="" id="taskName" minlength="2" maxlength="25" placeholder = "Task Name" required>
                     </div>
     
                 </fieldset>
 
                 <fieldset>
                     <div class = 'form-field'>
-                        <textarea placeholder="Task Description"></textarea> 
+                        <textarea id = "toDoDescription" placeholder="Task Description"></textarea> 
                         <!-- name="" id="" minlength="2" maxlength="25" placeholder = "Task Description" required> -->
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <div class = 'form-field'>
-                        <input type="email" name="" id="" minlength="3" maxlength="25" placeholder = "Due Date" required>
+                        <input type="date" name="" id="dueDate" placeholder = "Due Date" required>
                     </div>
     
                     <div class = 'form-field'>
-                        <input type="text" name="" id="" minlength="9" maxlength="10" placeholder = "Project" required>
+                        <select name="" id="project" placeholder = "Project" required>
+                            
+                        </select>
                     </div>
                 </fieldset>
 
-                <button type="submit">Create To Do</button>
+                <button type="submit" class = "createToDoButton">Create To Do</button>
             </form>
         </div>
     </div>

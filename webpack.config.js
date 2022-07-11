@@ -7,6 +7,8 @@ module.exports = {
 
   devServer: {
     static: './dist',
+    hot: false,
+    client: false,
   },
 
   plugins: [
