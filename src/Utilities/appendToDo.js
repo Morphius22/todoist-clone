@@ -2,7 +2,7 @@ import { clearContent } from './clearContent';
 import { createElement } from './initialLoad';
 import {projects} from '../index';
 
-
+//Why not just append the new one if it matches the projects. Or it opens the project.
 export function appendToDo (todoArray) {
     let taskNumber = 0;
     clearContent();
@@ -18,6 +18,9 @@ export function appendToDo (todoArray) {
     });
 }
 
+
+//wtf does this even do?
+//Displays to-do's for a specific project when that project is clicked in sidebar
 export function menuListeners (projects) {
     let menuProjects = document.querySelectorAll('.menuItem');
     console.log('menu projects:' + menuProjects);
