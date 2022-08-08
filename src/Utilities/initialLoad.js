@@ -1,7 +1,7 @@
 import {clearContent} from './clearContent';
 import {displayForm} from './toDoForm';
 import {hideForm} from './toDoForm';
-import { createToDo } from './createToDo';
+import { createToDo, displayToDos } from './createToDo';
 import { addTaskToProject } from './createToDo';
 import {projects} from '../index';
 import {appendToDo} from './appendToDo'
@@ -51,6 +51,7 @@ export function loadContent () {
         clearContent();
         let newToDo = createToDo();
         addTaskToProject(projects,newToDo);
+        displayToDos();
         console.log(projects);
     })
 }
