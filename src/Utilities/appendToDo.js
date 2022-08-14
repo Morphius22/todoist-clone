@@ -4,18 +4,21 @@ import {projects} from '../index';
 
 //Why not just append the new one if it matches the projects. Or it opens the project.
 export function appendToDo (todoArray) {
-    let taskNumber = 0;
-    // clearContent();
     todoArray.forEach(object => {
-        createElement('div','.toDoSection', 'toDoItem', object.id,'');
-        createElement ('p', '#' + object.id,'toDoTitle', '', object.toDoTitle);
-        createElement ('p', '#' + object.id,'toDoDescription', '', object.description);
-        createElement ('p', '#' + object.id,'toDoDueDate', '', object.dueDate);
-        createElement ('p', '#' + object.id,'toDoProject', '', object.project);
-        createElement ('button', '#' + object.id,'taskDoneButton', object.project, 'Complete');
-        taskNumber += 1;
-        completeToDo();
+        createToDoOnPage(object);
     });
+}
+
+function createToDoOnPage(object) {
+    let taskNumber = 0;
+    createElement('div','.toDoSection', 'toDoItem', object.id,'');
+    createElement ('p', '#' + object.id,'toDoTitle', '', object.toDoTitle);
+    createElement ('p', '#' + object.id,'toDoDescription', '', object.description);
+    createElement ('p', '#' + object.id,'toDoDueDate', '', object.dueDate);
+    createElement ('p', '#' + object.id,'toDoProject', '', object.project);
+    createElement ('button', '#' + object.id,'taskDoneButton', object.project, 'Complete');
+    taskNumber += 1;
+    completeToDo();
 }
 
 
